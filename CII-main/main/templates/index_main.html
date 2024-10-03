@@ -1,0 +1,259 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<head>
+    <meta charset="utf-8" http-equiv="x-ua-compatible" content="ie=edge" name="description" content="" name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>CII - Confederation of Indian Industry</title>
+    <link rel="manifest" href=" {% static 'site.html' %} ">
+    <link rel="shortcut icon" type="image/x-icon" href=" {% static 'img/favicon.png' %} ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/owl.carousel.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/animate.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/magnific-popup.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/fontawesome-all.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/themify-icons.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/slick.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/meanmenu.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/default.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/responsive.css' %} ">
+    {% block head %}
+
+    {% endblock %}
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- header-start -->
+    <header id="home">
+        <div class="header-area">
+            <!-- header-top -->
+            <div class="navbar-header d-flex align-items-center px-3 text-white" style="justify-content: space-between; background-color:#322975">
+                <div class="top-left-link d-flex justify-content-center align-items-center">
+                    <div class="clock d-flex align-items-center px-3 navbar-mobile-view">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-clock-fill " viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        </svg>&nbsp;&nbsp
+                        <iframe src="https://free.timeanddate.com/clock/i8dyba8m/n1532/tlin/fn17/fcfff/tct/pct/ahl/tt0/ta1"
+                    frameborder="0" width="100%" height="19" allowtransparency="true"></iframe>
+                    </div>
+             
+                    {% comment %}        
+            <a class="text-white px-3 navbar-mobile-view" href="javascript:toggleTranslate()"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <path
+                        d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                </svg>&nbsp;Translate</a> {% endcomment %}
+            {% comment %} <a class="text-white px-3" href="javascript:loadNoticeModal()"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+                </svg>&nbsp;Announcements</a> {% endcomment %}
+        </div>
+        <div class="top-right-links d-flex align-items-center">
+            {% comment %} <a class="text-white student-btn px-1 m-2" href="{% url 'index' %}" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                <path fill-rule="evenodd"
+                    d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+            </svg>&nbsp;Student Login</a> {% endcomment %}
+            <div class="social-links d-flex flex-row justify-content-center align-items-center">
+                <a href="" class="m-3"><i class="ti-facebook text-white"></i></a>
+                <a href="https://twitter.com/FollowCII?t=3p9BSNTzoZftP6SdzXvb-Q&s=09" target="_blank" class="m-3"><i class="ti-twitter text-white"></i></a>
+                <a href="https://instagram.com/followcii?igshid=YmMyMTA2M2Y=" target="_blank" class="m-3"><i class="ti-instagram text-white"></i></a>
+            </div>
+        </div>
+    </div>
+
+            <!-- header-bottom -->
+            <div class="header-bottom-area header-sticky p-3" style="transition: .6s;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+                            <div class="logo">
+                                <a href=" {% url 'index' %} ">
+                                    <img src="{% static 'img/logo/logo_cii.png' %}" width="200" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-6 col-6">
+                            <div class="main-menu f-right">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li>
+                                            <a href=" {% url 'index' %} ">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'index' %}#about">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href=" {% url 'industry' %} ">Industries</a>
+                                        </li>
+                                        <li>
+                                            <a href=" {% url 'institute' %} ">Institutions</a>
+                                        </li>
+                                        <li>
+                                              <div class="dropdown show">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Opportunities
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item" href="{% url 'openings' %}">Openings</a>
+                                                  <a class="dropdown-item" href="{% url 'consultancies' %}">Consultancies</a>
+                                                </div>
+                                              </div>
+                                            </li>
+                                        
+                                        {% if user.is_authenticated %}
+                                              <li>
+                                                <div class="dropdown show">
+                                                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Hello, {{request.user}}
+                                                  </a>
+                                                
+                                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                                                    <a class="dropdown-item" href="{% url 'student_applications' %}">My Applications</a>
+                                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                            {% else %}
+                                            <li>
+                                                <a href=" {% url 'login' %} "><button type="button" class="btn yewello-bg-btn">Login</button></a>
+                                            </li>
+                                            
+                                        {% endif %} 
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /end header-bottom -->
+        </div>
+    </header>
+    <!-- header-end -->
+    {% block main %}
+    {% endblock %}
+        
+    <!-- footer start -->
+    <footer id="Contact">
+        <div class="footer-area primary-bg pt-30">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="footer-widget mb-15">
+                                <div class="footer-heading">
+                                    <h1>Quick Links</h1>
+                                </div>
+                                <div class="footer-menu clearfix">
+                                    <ul>
+                                        <li>
+                                            <a href=" {% url 'index' %} ">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href=" {% url 'industry' %} ">Industries</a>
+                                        </li>
+                                        <li>
+                                            <a href=" {% url 'institute' %} ">Institutions</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'openings' %}">Openings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Consultancies</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4  col-md-6">
+                            <div class="footer-widget mb-20">
+                                <div class="footer-heading">
+                                    <h1>Contact Us</h1>
+                                </div>
+                                <div class="footer-contact-list">
+                                    <div class="single-footer-contact-info">
+                                        <span class="ti-headphone "></span>
+                                        <span class="footer-contact-list-text">+91-1145771000</span>
+                                    </div>
+                                    <div class="single-footer-contact-info">
+                                        <span class="ti-email "></span>
+                                        <span class="footer-contact-list-text">info@cii.in</span>
+                                    </div>
+                                    <div class="single-footer-contact-info">
+                                        <span class="ti-location-pin"></span>
+                                        <span class="footer-contact-list-text">23, Institutional Area, Lodi Road, New Delhi - 110 003 (India)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom pt-15 pb-15">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="footer-copyright text-center">
+                                    <span><a target="">Copyright 2022 CII | All Rights Reserved</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <!-- JS here -->
+    <script src=" {% static 'js/vendor/modernizr-3.5.0.min.js' %} "></script>
+    <script src=" {% static 'js/vendor/jquery-1.12.4.min.js' %} "></script>
+    <script src=" {% static 'js/popper.min.js' %} "></script>
+    <script src=" {% static 'js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'js/owl.carousel.min.js' %} "></script>
+    <script src=" {% static 'js/isotope.pkgd.min.js' %} "></script>
+    <script src=" {% static 'js/one-page-nav-min.js' %} "></script>
+    <script src=" {% static 'js/slick.min.js' %} "></script>
+    <script src=" {% static 'js/ajax-form.js' %} "></script>
+    <script src=" {% static 'js/wow.min.js' %} "></script>
+    <script src=" {% static 'js/jquery.meanmenu.min.js' %} "></script>
+    <script src=" {% static 'js/jquery.barfiller.js' %} "></script>
+    <script src=" {% static 'js/jquery.scrollUp.min.js' %} "></script>
+    <script src=" {% static 'js/imagesloaded.pkgd.min.js' %} "></script>
+    <script src=" {% static 'js/jquery.counterup.min.js' %} "></script>
+    <script src=" {% static 'js/waypoints.min.js' %} "></script>
+    <script src=" {% static 'js/jquery.magnific-popup.min.js' %} "></script>
+    <script src=" {% static 'js/plugins.js' %} "></script>
+    <script src=" {% static 'js/main.js' %} "></script>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

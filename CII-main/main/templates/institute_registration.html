@@ -1,0 +1,169 @@
+{% extends 'index_main.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href=" {% static 'css/sign-up.css' %} ">
+{% endblock %}
+
+{% block main %}
+    <div id="events" class="events-area events-bg-height pt-70 pb-70" style="background-image: url( {% static 'img/courses/courses_bg.png' %}">
+        <div class="slider-area">
+            <div class="pages-title">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="slider-content slider-content-breadcrumb text-center">
+                                    <h2 class="white-color f-400">INSTITUTE REGISTRATION</h2>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="events-list">
+                <div class="row">
+                    <div class="col-xl-17 col-lg-37 col-md-30">
+                        <div class="events-registration-form mb-30">
+                            <div class="events-registration-form-wrapper">
+                                <div class="form-bg-yellow events-registration-form-heading d-flex justify-content-between">
+                                    <div class="events-registration-form-heading-title">
+                                        <h1>Register Now</h1>
+                                        <span>Fill up the form</span>
+                                    </div>
+                                    <div class="events-registration-form-heading-icon">
+                                        <img src=" {% static 'img/events/events-registration-form-icon.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="events-registration-main-form">
+                                    <form method= "POST" action="#">
+                                        {% csrf_token %}
+                                        <div class="row mb-6">
+                                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="" id="name"/> -->
+                                              {{ form.name }}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10">
+                                                <!-- <input class="form-control" type="textarea" name="description" id ="description" required/> -->
+                                                {{ form.description }}
+                                                
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row mb-6">
+                                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="email" class="form-control" id="email" /> -->
+                                                {{ form.email_id }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="logo" class="col-sm-2 col-form-label">Logo</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="file" class="form-control" id="logo"/> -->
+                                                {{ form.logo }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="category" class="col-sm-2 col-form-label">Category</label>
+                                            <div class="col-sm-10">
+                                                    {{ form.domain }}
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="registration_date" class="col-sm-2 col-form-label">Registration Date</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="date" class="form-control" id="registration_date"/> -->
+                                                {{ form.registration_date }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="estb_year" class="col-sm-2 col-form-label">Establishment Year</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="date" class="form-control" id="estb_year"> -->
+                                                {{ form.estb_year }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="cii_id" class="col-sm-2 col-form-label">CII ID</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="number" class="form-control" id="cii_id"/> -->
+                                                {{ form.cii_id }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="website" class="col-sm-2 col-form-label">Website</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="form-control" id="website"/> -->
+                                                {{ form.website }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="contact_num" class="col-sm-2 col-form-label">Contact Number</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="tel" class="form-control" id="contact_num"/> -->
+                                                {{ form.contact_num }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="address" class="col-sm-2 col-form-label">Address</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="form-control" id="address"/> -->
+                                                {{ form.address }}
+                                                
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row mb-6">
+                                            <label for="city" class="col-sm-2 col-form-label">City</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="form-control" id="city"/> -->
+                                                {{ form.city }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="state" class="col-sm-2 col-form-label">State</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="form-control" id="state"/> -->
+                                                {{ form.state }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="pincode" class="col-sm-2 col-form-label">PinCode</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="number" class="form-control" id="pincode"/> -->
+                                                {{ form.pincode }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+                                            <label for="country" class="col-sm-2 col-form-label">Country</label>
+                                            <div class="col-sm-10">
+                                              <!-- <input type="text" class="form-control" id="country"/> -->
+                                                {{ form.country }}
+                                            </div>
+                                        </div>
+                                        <input type="submit" placeholder="Register" class="btn yellow-bg-btn blue-bg-btn-hover mt-3">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

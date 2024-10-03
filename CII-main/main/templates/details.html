@@ -1,0 +1,74 @@
+{% extends 'index_main.html' %}
+{% load static %}
+
+{% block main %}
+
+ <div class="course-details-area pt-100" style="backgroud-color: grey">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8">
+                <div class="single-course-details-area mb-30 border shadow-lg">
+                    <div class="single-course-details">
+                        <div class="d-flex flex-column flex-md-row border-bottom justify-content-md-between">
+                        <div class="title">
+                            <h3>{{opening.job_title}}</h3>
+                            <h6 class="mt-4">Industry Name : <span style="color: #ffc600;">{{opening.industry}}</span></h6>
+                        </div> 
+                            <div class="price-button mt-1">
+                                <form method="POST" action="">
+                                    <input type="hidden" class="form-control" value="{{ user.id }}" name="user" id="user">
+                                    <input type="hidden" class="form-control" value="{{ opening }}" name="openings" id="openings">
+                                </form>
+                                <a class="btn main-btn" href="{% url 'profile' %}" target="_blank">Apply Now</a>
+                            </div>
+                    </div>
+                        <div class="course-details-tabs">
+                        <div class="mt-4">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews" role="tab" aria-controls="pills-contact" aria-selected="false">Job Description</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {{ user.id }}
+                        {{ opening.id }}
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="course-details-overview-top">
+                                        <p class="course-details-overview-para">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the grex plorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves</p>
+                                        <p>No one rejects, dislikes, or avoids pleasure itself because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves expound the actual teachings of the grex plore.</p>
+                                    </div>
+                                    <div class="course-details-overview-bottom d-flex justify-content-between mt-25">
+                                        <div class="course-overview-info-left">
+                                            <div class="course-overview-info-advisor mt-10">
+                                                <span class="gray-color">Stipend : <span class="primary-color">{{opening.stipend}}</span></span>
+                                            </div>
+                                            <div class="course-overview-student-lecture mt-10">
+                                                <span class="gray-color">Past Experience : <span class="primary-color">{{opening.past_experience_required}}</span></span>
+                                            </div>
+                                            <div class="course-overview-time-delay mt-10">
+                                                <span class="gray-color">Opening Date : <span class="primary-color">{{opening.opening_date}}</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="course-overview-info-right">
+                                        <div class="course-overview-info-tag mt-10">
+                                                <span class="gray-color">Apply by:  <span class="primary-color">{{opening.key_skills}}</span> </span>
+                                            </div>
+                                            <div class="course-overview-info-tag mt-10">
+                                                <span class="gray-color">Key Skills : <span class="primary-color">{{opening.key_skills}}</span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- courses start -->
+
+<!-- courses end -->
+{% endblock %}

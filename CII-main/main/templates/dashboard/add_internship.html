@@ -1,0 +1,94 @@
+{% extends 'dashboard/dashboard_main.html' %}
+{% load static %}
+
+{% block main %}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">
+                Add internship
+                <a href="{% url 'manageinternship' industry %}" class="btn btn-success">Back</a>
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+            <form method= "POST" action="">
+                {% csrf_token %}
+                <div class="row mb-3">
+                    <label for="job_title" class="col-sm-2 col-form-label">Job Title</label>
+                    <div class="col-sm-8">
+                      {{ form.job_title }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-8">
+                        {{ form.description }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="industry" class="col-sm-2 col-form-label">Industry</label>
+                    <div class="col-sm-8">
+                        {{ form.industry }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="key_skills" class="col-sm-2 col-form-label">Key Skills</label>
+                    <div class="col-sm-8">
+                        {{ form.key_skills }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="opening_date" class="col-sm-2 col-form-label">Opening Date</label>
+                    <div class="col-sm-8">
+                        {{ form.opening_date }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="city" class="col-sm-2 col-form-label">City</label>
+                    <div class="col-sm-8">
+                        {{ form.city }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="state" class="col-sm-2 col-form-label">State</label>
+                    <div class="col-sm-8">
+                        {{ form.state }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="stipend" class="col-sm-2 col-form-label">Stipend</label>
+                    <div class="col-sm-8">
+                        {{ form.stipend }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="past_experience_required" class="col-sm-2 col-form-label">Past Experience Required</label>
+                    <div class="col-sm-8">
+                        {{ form.past_experience_required }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="apply_by" class="col-sm-2 col-form-label">Last Date to apply</label>
+                    <div class="col-sm-8">
+                        {{ form.apply_by }}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success mt-3">Register</button>
+            </form>
+            </div>
+        </div>
+        <div class="card-footer">
+
+        </div>
+    </div>
+</div>
+<script>
+    {% for message in messages %}
+               var messag='{{message}}'
+            {% endfor %}
+            console.log(messag)
+    
+    window.alert(messag)
+</script>
+{% endblock %}

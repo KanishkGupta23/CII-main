@@ -1,0 +1,65 @@
+{% extends 'index_main.html' %}
+{% load static %}
+
+
+
+{% block main %}
+
+<div class="slider-area gray-bg">
+    <div class="pages-title">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="slider-content slider-content-breadcrumb text-center">
+                            <h2 class="mt-5 f-700">Openings/Opportunities</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="courses-area courses-bg-height gray-bg pt-70 pb-70">
+    <div class="container">
+        <div class="courses-list">
+            <div class="row">
+                {% for opening in openings %}
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="courses-wrapper course-radius-none mb-30 card max-height-100 min-height-100">
+                        <div class="courses-thumb">
+                            <a href="{% url 'details' opening.job_title opening.industry.name %}"></a>
+                        </div>
+                        <div class="course-main-content clearfix">
+                            <div class="courses-content">
+                                <div class="courses-category-name">
+                                    <span>
+                                        <a href="#">{{ opening.industry }}</a>
+                                    </span>
+                                </div>
+                                <div class="courses-heading">
+                                    <h1><a href="{% url 'details' opening.job_title opening.industry.name %}">{{ opening.job_title }}</a></h1>
+                                </div>
+                                <div class="courses-para height-100">
+                                    <p>{{ opening.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-wrapper-bottom clearfix mb-1">
+                            <div class="courses-button d-flex justify-content-end">
+                                <a href="{% url 'details' opening.job_title opening.industry.name %}">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

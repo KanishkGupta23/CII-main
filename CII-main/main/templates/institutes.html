@@ -1,0 +1,329 @@
+{% extends 'index_main.html' %}
+{% load static %}
+
+
+
+ {% block main %}
+
+    <!-- slider-start -->
+    <div class="slider-area gray-bg">
+        <div class="pages-title">
+           
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider-content slider-content-breadcrumb text-center">
+                                <h2 class="mt-5 f-700">Institutes</h2>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider-end --> 
+    
+    <div class="course-details-area gray-bg pt-100 pb-70" >
+        <div class="container">
+            <div class="row ">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="row">
+                        <div class="col-xl-12 events-paddings " id="institute_container">                
+                        </div>
+                         
+                         
+                       
+                    <div class="container">  
+
+                     <div class="row justify-content-center">
+                        <p id="out" > </p>
+                     </div>
+                     <div class="row justify-content-center">
+                        <li class="page-item center-block">
+                            <a class="page-link center-block" href="#" id ="prev"><i class="fas fa-chevron-left"></i></a>
+                            <a class="page-link " href="#" id ="next"><i class="fas fa-chevron-right"></i></a>
+                        </li>
+                    </div>
+
+                     </div>
+                
+                        <h1 id="pages" hidden >{{ page_obj.paginator.num_pages }}</h1>
+
+{% comment %} <div class="pagination"> 
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        
+            <a id ="prev">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+        
+        {% comment %} <li class="page-item">
+            <div class="page-link" id="next"><i class="fas fa-chevron-right"></i>Next</div>
+        </li> 
+        {% if page_obj.has_next %}
+        
+       
+            <a id ="next">next</a>
+            
+        {% endif %}
+    </span>
+</div> {% endcomment %}
+                            
+                       
+                    </div>
+                    {% comment %} <div class="row">
+                        <div class="col-xl-12">
+                            <nav class="course-pagination mb-30" aria-label="Page navigation example">
+                                <ul class="pagination justify-content-start">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">4</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+                <div class="col-xl-4 col-lg-4 events-sidebar-margin">
+                    <div class="courses-details-sidebar-area">
+                        <div class="widget mb-40 widget-padding">
+                            <div class="banner-thumb pos-relative">
+                                <div class="bannger-text">
+                                    <div class="banner-btn">
+                                        <a href="{% url 'institute_registration' %}"><button data-bs-target="" class="btn yewello-bg-btn">Register now</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %} <div class="widget mb-40 white-bg">
+                            <div class="sidebar-form">
+                                <form action="#">
+                                    <input placeholder="Search course" type="text">
+                                    <button type="submit">
+                                        <i class="ti-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="widget mb-40 widget-padding white-bg">
+                            <h4 class="widget-title">Recent Course</h4>
+                            <div class="widget-tags clearfix">
+                                <ul class="sidebar-tad clearfix">
+                                    <li>
+                                        <a href="#">CSE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Study</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">English</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Education</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Advisor</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="widget mb-40 widget-padding white-bg">
+                            <h4 class="widget-title">Category</h4>
+                            <div class="widget-link">
+                                <ul class="sidebar-link">
+                                    <li>
+                                        <a href="#">Busines Studies</a>
+                                        <span>05</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">CSE Engineering</a>
+                                        <span>07</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lerning English</a>
+                                        <span>03</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Civil Engineering</a>
+                                        <span>05</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Islamic Studies</a>
+                                        <span>02</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Banking Management</a>
+                                        <span>09</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Social Science</a>
+                                        <span>13</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> {% endcomment %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<p>
+    Current Page: <b id="current"></b>
+</p>
+
+<script>
+    async function getData(url, page) {
+        const urlWithParams = url + "?" + new URLSearchParams({
+            page: page,
+        })
+        const response = await fetch(urlWithParams);
+        return response.json();
+    }
+
+    class FauxPaginator {
+        constructor(perPage) {
+            this.perPage = perPage
+            this.pageIndex = 1
+            this.pageCount = parseInt(document.querySelector("#pages").innerHTML)
+            this.container = document.querySelector("#institue_container")
+            this.elements = document.querySelectorAll("pre")
+            this.out=document.querySelector("#out")
+            this.label = document.querySelector("#current")
+            this.prev = document.querySelector("#prev")
+            this.next = document.querySelector("#next")
+            this.prev.addEventListener("click", this.onPrevClick.bind(this))
+            this.next.addEventListener("click", this.onNextClick.bind(this))
+            this.goToPage()
+        }
+
+        onPrevClick(event) {
+            event.preventDefault()
+            if(this.pageIndex===0){
+               
+               return 
+            }
+            this.pageIndex--
+            this.goToPage()
+        }
+
+        onNextClick(event) {
+            event.preventDefault()
+            if(this.pageIndex===this.pageCount){
+
+                return
+
+            }
+            this.pageIndex++
+            this.goToPage()
+        }
+
+        addElement(keyword) {
+            const pre = document.createElement("h2")
+            pre.innerHTML = `
+            <div class="single-events mb-30">
+                <div class="events-wrapper">
+                    <div class="events-inner d-flex">
+                        <div class="events-thumb">
+                            <a href="{% url 'institute_details' %}"><img src=${keyword.fields.logo} alt=""></a>
+                        </div>
+                        <div class="events-text events-text-2 white-bg border border-5">
+                            <div class="event-text-heading d-flex mb-20">
+                                <div class="events-text-title">
+                                    <a href="{% url 'institute_details' %}">
+                                        <h4>${keyword.fields.name}</h4>
+                                    </a>
+                                    <div class="time-area time-area-2">
+                                        <span class="ti-timer"></span>
+                                        <span class="published-time">{{institute.name}}</span>
+                                    </div>
+                                    <div class="time-area time-area-2">
+                                        <span class="ti-map-alt"></span>
+                                        <span class="published-time published-location">${keyword.fields.name}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="events-para">
+                                <p>I will give you a complete account of the system and expound the actual teachings</p>
+                            </div>
+                            <div class="events-view-btn mt-10 border border-top-5 text-center pt-2">
+                                <a href="{% url 'institute_details' %}">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+`;
+            this.container.append(pre)
+        }
+
+        goToPage() {
+             if(this.pageIndex===1 ){
+                this.prev.style.display="none";
+ 
+              }
+              else{
+                 this.prev.style.display="inline-block";
+              }
+              if (this.pageIndex===this.pageCount){
+                 this.next.style.display="none";
+              }
+              else {
+              this.next.style.display="inline-block";
+              }
+              
+              
+              
+              
+             
+             
+             
+            getData("{% url 'institute_api' %}", this.pageIndex)
+                .then(response => {
+                    this.container.innerHTML = '';
+                    console.log(response,"debug")
+                    response.forEach((el) => {
+                        this.addElement(el)
+                    });
+                    this.out.innerText=`${this.pageIndex} of ${this.pageCount}`; 
+                    
+                    this.label.innerText = this.pageIndex
+                    
+                    const firstPage = this.pageIndex === 1
+                    const lastPage = !response.page.has_next
+                    this.prev.style.display = firstPage ? "none" : "inline-block"
+                    this.next.style.display = lastPage ? "none" : "inline-block"
+                });
+        }
+    }
+
+    new FauxPaginator(3);
+</script>
+    <!-- subscribe end -->
+{% endblock %}
+{% comment %} {% endblock %} {% endcomment %}

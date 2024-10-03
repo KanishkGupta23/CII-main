@@ -1,0 +1,34 @@
+{% extends 'index_main.html' %}
+{% load static %}
+{% block main %}
+ <div class="advisors-area gray-bg pt-95 pb-70">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-12 col-lg-6 col-md-10 offset-md-1 ml-md-auto">
+                    <div class="events-details-form faq-area-form mb-30 p-0">
+                        <form method="post" >
+                            <div class="row">
+                                <div class="col-xl-8">
+                                    <div class="events-form-title mb-25">
+                                        <h2>Update Profile</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    {{ form }}
+                                    <div class="faq-form-btn events-form-btn">
+                                        <button class="btn m-0">submit now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock main %}

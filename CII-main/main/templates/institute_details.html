@@ -1,0 +1,99 @@
+{% extends 'index_main.html' %}
+{% load static %}
+ {% block main %}
+    <!-- slider-start -->
+    <div class="slider-area gray-bg">
+        <div class="pages-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider-content slider-content-breadcrumb text-center">
+                                <h2 class="mt-5 f-700">Institute Details</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- slider-end -->
+    <div class="event-details-area gray-bg pt-100 pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="single-event-details-area white-bg mb-40">
+                        <div class="event-details-thumb mb-35">
+                            <img src="{% static 'img/events/event_details_thumb.jpg' %}" alt="">
+                        </div>
+                        <div class="single-event-details event-details-padding white-bg">
+                            <div class="events-text-title clearfix mb-20">
+                                <a href="#">
+                                    <h4>Business Conferences</h4>
+                                </a>
+                                <div class="time-area">
+                                    <span class="ti-time"></span>
+                                    <span class="published-time">05:23 AM - 09:23 AM</span>
+                                </div>
+                            </div>
+                            <div class="events-details-content mb-35">
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself because it is pleasure, but because those who do not know how to pursue pleasure rationally encoun conse quences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences.</p>
+                            </div>
+                            <div class="events-map">
+                                <img src="{% static 'img/events/event_details_map.jpg' %}" alt="">
+                            </div>
+                            <div class="events-details-share d-flex justify-content-end mt-30">
+                                <div class="events-details-title">
+                                    <span>Share Now</span>
+                                </div>
+                                <div class="events-details-socila-icon">
+                                    <ul>
+                                        <li><a href="#"><span class="ti-facebook"></span></a></li>
+                                        <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                                        <li><a href="#"><span class="ti-dribbble"></span></a></li>
+                                        <li><a href="#"><span class="ti-google"></span></a></li>
+                                        <li><a href="#"><span class="ti-pinterest "></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-details-form faq-area-form white-bg mb-30">
+                        <form>
+                            <div class="row">
+                                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-12">
+                                    <div class="events-form-title text-center mb-30">
+                                        <h2>Book Your Seat</h2>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <input placeholder="Name :" type="text">
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <input placeholder="Email :" type="text">
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <input placeholder="Date :" type="text">
+                                    <span class="ti-calendar"></span>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <input placeholder="Time :" type="text">
+                                    <span class="ti-timer"></span> 
+                                </div>
+                                <div class="col-xl-12">
+                                    <textarea cols="30" rows="10" placeholder="Coments :"></textarea>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="faq-form-btn events-form-btn text-center">
+                                        <button class="btn">Booking now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

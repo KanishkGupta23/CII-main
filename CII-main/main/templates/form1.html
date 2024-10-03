@@ -1,0 +1,16 @@
+
+{% block body %}
+<h2>-------- Upload Excel Sheet  Here --------</h2>
+<form action="{% url 'excel_form' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="excel_file">Select Excel Files:</label>
+    <input type="file" id="excel_file" name="excel_file"><br><br>
+    <input type="submit" name="upload_form"  value="Upload">
+  </form>
+
+
+
+
+
+{% endblock body %}
+

@@ -1,0 +1,77 @@
+{% extends 'index_main.html' %}
+{% load static %}
+
+
+
+{% block main %}
+
+<div class="slider-area gray-bg">
+    <div class="pages-title">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="slider-content slider-content-breadcrumb text-center">
+                            <h2 class="mt-5 f-700">Problem Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="courses-area courses-bg-height gray-bg pt-70 pb-70">
+    <div class="container">
+        <div class="courses-list">
+            <div class="row">
+                <table class="table table-bordered table-striped">
+                    
+                        <tr>
+                            <th>Industry</th>
+                            <td>
+                                {{ problem.industry }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Problem Title</th>
+                            <td>    
+                                {{ problem.problem }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Problem Description</th>
+                            <td>
+                                {{ problem.problem_description }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td>
+                                {{ problem.domain }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <td>
+                                {{ problem.category }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Last Date to Apply</th>
+                            <td>
+                                {{ problem.apply_by }}
+                            </td>
+                        </tr>
+                        
+                    
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

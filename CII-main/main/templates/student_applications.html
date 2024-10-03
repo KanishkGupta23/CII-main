@@ -1,0 +1,53 @@
+{% extends 'index_main.html' %}
+{% load static %}
+
+
+
+{% block main %}
+
+                <div class="slider-area gray-bg">
+                    <div class="pages-title">
+                        
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="slider-content slider-content-breadcrumb text-center">
+                                            <h2 class="mt-5 f-700">My Applications</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="courses-area courses-bg-height gray-bg pt-70 pb-70">
+                    <div class="container">
+                        <div class="courses-list">
+                            <div class="row">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Job Title</th>
+                                            <th scope="col">Company</th>
+                                            <th scope="col">Date Applied</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for application in applications %}
+                                        <tr>
+                                            <td>{{ application.openings.job_title }}</td>
+                                            <td>{{ application.openings.industry }}</td>
+                                            <td>{{ application.application_date }}</td>
+                                            <td><a href="{% url 'delete_application' application.id %}">Withdraw</a></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+{% endblock %}
