@@ -10,6 +10,20 @@
 	<title>
       	Institute Dashboard
   	</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .dashboard-card {
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .bg-students { background-color: #6f42c1; }
+        .bg-applications { background-color: #e83e8c; }
+        .bg-openings { background-color: #20c997; }
+        .bg-institutes { background-color: #007bff; }
+    </style>
 	<!--     Fonts and icons     -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<!-- Nucleo Icons -->
@@ -28,6 +42,78 @@
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     {% include 'institute_dashboard/navbar.html' %}
+
+    <div class="container-fluid">
+      <div class="row">
+          <!-- Main Dashboard Content -->
+          <main role="main" class="col-md-12">
+              <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                  <h1 class="h2">Dashboard</h1>
+              </div>
+
+              <div class="row">
+                  <!-- Students -->
+                  <div class="col-md-3 mb-4">
+                      <div class="dashboard-card bg-students">
+                          <h5>Total Students</h5>
+                          <h2>1,200</h2>
+                      </div>
+                  </div>
+                  <!-- Applications -->
+                  <div class="col-md-3 mb-4">
+                      <div class="dashboard-card bg-applications">
+                          <h5>Applications</h5>
+                          <h2>450</h2>
+                      </div>
+                  </div>
+                  <!-- Openings -->
+                  <div class="col-md-3 mb-4">
+                      <div class="dashboard-card bg-openings">
+                          <h5>Openings</h5>
+                          <h2>50</h2>
+                      </div>
+                  </div>
+                  <!-- Institutes -->
+                  <div class="col-md-3 mb-4">
+                      <div class="dashboard-card bg-institutes">
+                          <h5>Institutes</h5>
+                          <h2>30</h2>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Example Chart (Static) -->
+              <div class="row">
+                  <div class="col-md-8">
+                      <canvas id="applicationsChart"></canvas>
+                  </div>
+              </div>
+          </main>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+      var ctx = document.getElementById('applicationsChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Institute 1', 'Institute 2', 'Institute 3', 'Institute 4'],
+              datasets: [{
+                  label: 'Applications',
+                  data: [200, 150, 100, 50],
+                  backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: { beginAtZero: true }
+              }
+          }
+      });
+  </script>
 
 
 {% block main %}

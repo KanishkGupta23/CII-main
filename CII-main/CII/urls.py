@@ -28,6 +28,7 @@ urlpatterns = [
     path('myapplications/<str:pk>/delete/', views.delete_application, name='delete_application'),
     path('contact/', views.contact, name='contact'),
     path('openings/', views.openings, name='openings'),
+    #  path('/', views.consent, name='apply'),
     path('openings/<str:pk>/delete/', views.deleteopening, name='deleteopening'),
     path('consultancies/', views.consultancies, name='consultancies'),
     path('consultancies/<str:pk>/details/',views.consultancy_details, name='consultancy_details'),
@@ -42,13 +43,10 @@ urlpatterns = [
     path('institutes/institutes_details/', views.institute_details, name='institute_details'),
     path('institutes/institute_registration/', views.institute_registration, name='institute_registration'),
     path('institute-api/', views.institute_data, name="institute_api"),
-
     path('register/', views.registerPage, name="register"),
     path('login/', views.loginPage, name="login"),
     path('logout/', views.logoutUser, name="logout"),
-
-    path('send-mails/', views.send_mails, name='send_mails'),
-    
+    path('dashboard/', views.send_mails, name='send_mails'),
     path('login/institute_dashboard/<str:pk>/',views.institute_dashboard, name='institute_dashboard'),
     path('institute_dashboard/<str:pk>/studentlist/',views.institute_student_list,name = 'institute_student_list'),
     path('institute_dashboard/<str:pk>/internship/manage',views.manage_institute_internship,name = 'manage_institute_internship'),
@@ -57,7 +55,6 @@ urlpatterns = [
     path('institute_dashboard/<str:pk>/openings/<str:ic>/apply',views.apply_openings,name = 'apply_openings'),
     path('institute_dashboard/<str:pk>/openings/<str:ic>/apply/consent',views.consent_,name = 'consent'),
     path('institute_dashboard/<str:pk>/openings/<str:ic>/apply/application',views.application,name = 'application'),
-             
     path('dashboard/<str:pk>/', views.dashboard, name='dashboard'),
     path('dashboard/<str:pk>/studentlist/', views.student_list, name='internship'),
     path('dashboard/<str:pk>/studentlist/<str:ic>/institutes', views.institutes_applied, name='institutes_applied'),
